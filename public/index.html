@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>國立暨南國際大學資管系獎學金申請表</title>
+        <link href="/css/main.css" rel="stylesheet">
+        <script src="/js/main.js"></script>
+    </head>
+    <body>
+        <h1 align="center">國立暨南國際大學資管系獎學金申請表</h1>
+
+        <!-- Login Form -->
+        <div id="loginDiv">
+            <h2 align="center">登入</h2>
+            <form id="loginForm">
+                <div>
+                    <label for="username">使用者名稱：</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">密碼：</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <br>
+                <input type="submit" value="登入">
+            </form>
+        </div>
+
+        <div id="applicationDiv" style="display:none;">
+            <form id="scholarshipForm">
+                <fieldset>
+                    <div>
+                        <label>申請日期：</label>
+                        <input type="date" id="application_date" name="application_date" required>
+                    </div>
+                    <div>
+                        <label>申請學生：</label>
+                        <input type="text" id="student_name" name="student_name" required>
+                    </div>
+                    <div>
+                        <label>學號：</label>
+                        <input type="text" id="student_number" name="student_number" required>
+                    </div>
+                    <div>
+                        <label for="department_and_grade">系所別（年級）：</label>
+                        <select id="department_and_grade" name="department_and_grade" required>
+                            <option value="">請選擇年級</option>
+                            <option value="大一">大一</option>
+                            <option value="大二">大二</option>
+                            <option value="大三">大三</option>
+                            <option value="大四">大四</option>
+                            <option value="碩一">碩一</option>
+                            <option value="碩二">碩二</option>
+                            <option value="碩三">碩三</option>
+                            <option value="碩四">碩四</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="advisor_name">導師：</label>
+                        <select id="advisor_name" name="advisor_name" required>
+                            <option value="">請選擇導師</option>
+                            <option value="姜美玲">姜美玲</option>
+                            <option value="戴榮賦">戴榮賦</option>
+                            <option value="陳彥錚">陳彥錚</option>
+                            <option value="黃俊哲">黃俊哲</option>
+                            <option value="白炳豐">白炳豐</option>
+                            <option value="簡宏宇">簡宏宇</option>
+                            <option value="游子宜">游子宜</option>
+                            <option value="余菁蓉">余菁蓉</option>
+                            <option value="王育民">王育民</option>
+                            <option value="洪嘉良">洪嘉良</option>
+                            <option value="陳小芬">陳小芬</option>
+                            <option value="陳建宏">陳建宏</option>
+                            <option value="鄭育評">鄭育評</option>
+                        </select>
+                    </div>
+                    <br>
+                    <hr>
+                    <h2>申請項目及說明</h2>
+                    <div>
+                        <input type="checkbox" id="competitionAward" name="applicationItem" value="competitionAward">
+                        <label for="competitionAward">參加校內、外（含國內、國際性）資管領域相關專業或學術性重要比賽得獎者</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="internationalConference" name="applicationItem" value="internationalConference">
+                        <label for="internationalConference">參加國際性學術研討會或國際性會議並以外文發表論文者（不含摘要及海報論文）</label>
+                    </div>
+                    <blockquote>
+                        <div>
+                            <input type="checkbox" id="internalSupportApplied" name="supportApplied" value="internalSupportApplied">
+                            <label for="internalSupportApplied">已向校內申請補助，申請單位：</label>
+                            <input type="text" id="internalSupportUnit" name="internalSupportUnit">
+                            <label>已獲補助額度：NT$</label>
+                            <input type="number" id="internalSupportAmount" name="internalSupportAmount">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="externalSupportApplied" name="supportApplied" value="externalSupportApplied">
+                            <label for="externalSupportApplied">已向校外申請補助，申請單位：</label>
+                            <input type="text" id="externalSupportUnit" name="externalSupportUnit">
+                            <label>已獲補助額度：NT$</label>
+                            <input type="number" id="externalSupportAmount" name="externalSupportAmount">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="internalSupportAppliedNotGranted" name="supportApplied" value="internalSupportAppliedNotGranted">
+                            <label for="internalSupportAppliedNotGranted">已向校內申請補助，申請單位：</label>
+                            <input type="text" id="internalSupportUnitNotGranted" name="internalSupportUnitNotGranted">
+                            <label>但未獲補助（若勾選此，請檢附未獲補助證明）</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="externalSupportAppliedNotGranted" name="supportApplied" value="externalSupportAppliedNotGranted">
+                            <label for="externalSupportAppliedNotGranted">已向校外申請補助，申請單位：</label>
+                            <input type="text" id="externalSupportUnitNotGranted" name="externalSupportUnitNotGranted">
+                            <label>但未獲補助（若勾選此，請檢附未獲補助證明）</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="noSupportApplied" name="supportApplied" value="noSupportApplied">
+                            <label for="noSupportApplied">未向校內外單位申請補助</label>
+                        </div>
+                    </blockquote>
+                    <div>
+                        <input type="checkbox" id="promoteDepartment" name="applicationItem" value="promoteDepartment">
+                        <label for="promoteDepartment">促進本系招生、聲譽提升、協助教學或行政工作等有具體事蹟者</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="masterThesisInEnglish" name="applicationItem" value="masterThesisInEnglish">
+                        <label for="masterThesisInEnglish">碩士畢業生學位口試以英文發表者</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bestPaperAward" name="applicationItem" value="bestPaperAward">
+                        <label for="bestPaperAward">參加資管領域相關學術研討會並榮獲最佳論文獎</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="nationalScienceCouncilAward" name="applicationItem" value="nationalScienceCouncilAward">
+                        <label for="nationalScienceCouncilAward">獲得「國科會大專學生研究計畫獎勵」者</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="internationalExchangeStudent" name="applicationItem" value="internationalExchangeStudent">
+                        <label for="internationalExchangeStudent">學生申請國際交換生</label>
+                    </div>
+                    <blockquote>
+                        <div>
+                            <input type="checkbox" id="internalSupportApplied" name="supportApplied" value="internalSupportApplied">
+                            <label for="internalSupportApplied">已向校內申請補助，申請單位：</label>
+                            <input type="text" id="internalSupportUnit" name="internalSupportUnit">
+                            <label>已獲補助額度：NT$</label>
+                            <input type="number" id="internalSupportAmount" name="internalSupportAmount">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="externalSupportApplied" name="supportApplied" value="externalSupportApplied">
+                            <label for="externalSupportApplied">已向校外申請補助，申請單位：</label>
+                            <input type="text" id="externalSupportUnit" name="externalSupportUnit">
+                            <label>已獲補助額度：NT$</label>
+                            <input type="number" id="externalSupportAmount" name="externalSupportAmount">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="internalSupportAppliedNotGranted" name="supportApplied" value="internalSupportAppliedNotGranted">
+                            <label for="internalSupportAppliedNotGranted">已向校內申請補助，申請單位：</label>
+                            <input type="text" id="internalSupportUnitNotGranted" name="internalSupportUnitNotGranted">
+                            <label>但未獲補助（若勾選此，請檢附未獲補助證明）</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="externalSupportAppliedNotGranted" name="supportApplied" value="externalSupportAppliedNotGranted">
+                            <label for="externalSupportAppliedNotGranted">已向校外申請補助，申請單位：</label>
+                            <input type="text" id="externalSupportUnitNotGranted" name="externalSupportUnitNotGranted">
+                            <label>但未獲補助（若勾選此，請檢附未獲補助證明）</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="noSupportApplied" name="supportApplied" value="noSupportApplied">
+                            <label for="noSupportApplied">未向校內外單位申請補助</label>
+                        </div>
+                    </blockquote>
+                    <br>
+                    <button type="submit">提交申請</button>
+                </fieldset>
+            </form>            
+        </div>
+
+        <script>
+            document.getElementById('loginForm').onsubmit = function(event) {
+                event.preventDefault();
+
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username: username, password: password })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('loginDiv').style.display = 'none';
+                        document.getElementById('applicationDiv').style.display = 'block';
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            };
+
+            document.getElementById('scholarshipForm').onsubmit = function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(this);
+
+                var formContent = '';
+                for (var pair of formData.entries()) {
+                    formContent += pair[0] + ': ' + pair[1] + '<br>';
+                }
+
+                var newWindow = window.open();
+                newWindow.document.write('<h1>國立暨南國際大學資管系獎學金申請內容</h1>' + formContent);
+                newWindow.document.close();
+
+                this.reset();
+            };
+        </script>
+    </body>
+</html>
