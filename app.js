@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // 建立 MySQL 連接池
 const db = mysql.createPool({
-    host: '192.168.1.101',// 根據實際情況修改
+    host: '',// 根據實際情況修改
     user: 'root', // 根據實際情況修改
-    password: 'Yan7668114', // 根據實際情況修改
+    password: '', // 根據實際情況修改
     database: 'scholarship_db',
     port: '3306',
     insecureAuth: true
